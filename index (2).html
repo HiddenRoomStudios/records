@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jazztron | Live Jazz &amp; Sophisticated Pop in Louisville, KY</title>
+<meta name="description" content="Jazztron is a Louisville, Kentucky live jazz and pop group for weddings, cocktail receptions, corporate events, and private parties. Solo guitar, guitar and vocals, or a full ensemble.">
+<meta name="theme-color" content="#121110">
+<meta property="og:title" content="Jazztron | Live Jazz &amp; Sophisticated Pop in Louisville, KY">
+<meta property="og:description" content="Flexible live music for weddings, cocktail receptions, corporate gatherings, and private parties in Louisville and Kentuckiana.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EntertainmentBusiness",
+  "name": "Jazztron",
+  "description": "Louisville, Kentucky live jazz and sophisticated pop entertainment for weddings, corporate events, cocktail receptions, and private parties.",
+  "email": "jazztron5@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Louisville", "addressRegion": "KY", "addressCountry": "US" },
+  "areaServed": ["Louisville, KY", "Kentuckiana"],
+  "sameAs": [
+    "https://www.facebook.com/jazztron",
+    "https://m.soundcloud.com/jazztron-1",
+    "https://www.gigsalad.com/jazztron_louisville"
+  ]
+}
+</script>
+
+<style>
+  /* ---------- Easy-edit design tokens ---------- */
+  :root {
+    --bg: #121110;
+    --bg-raised: #1b1917;
+    --line: #34302b;
+    --ivory: #f3ece0;
+    --ivory-dim: #c9c0b1;
+    --brass: #c9a45c;
+    --brass-deep: #8a6d2f;
+    --ink: #1a1816;
+    --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --max: 1120px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ivory);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, iframe { max-width: 100%; display: block; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+
+  .wrap { width: min(var(--max), 100% - 40px); margin-inline: auto; }
+  .eyebrow {
+    font-size: 12px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--brass); font-weight: 600; margin: 0 0 18px;
+  }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.08; margin: 0; letter-spacing: .01em; }
+  h2 { font-size: clamp(2rem, 5vw, 3.2rem); text-transform: uppercase; letter-spacing: .04em; }
+  p { margin: 0 0 1em; }
+  section { padding: clamp(64px, 11vw, 120px) 0; }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-block; text-decoration: none; text-align: center;
+    font-size: 13px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600;
+    padding: 16px 28px; border: 1px solid var(--brass);
+    transition: background .18s ease, color .18s ease, border-color .18s ease;
+  }
+  .btn-solid { background: var(--brass); color: var(--ink); }
+  .btn-solid:hover { background: var(--ivory); border-color: var(--ivory); }
+  .btn-ghost { color: var(--ivory); }
+  .btn-ghost:hover { background: rgba(201,164,92,.14); }
+
+  /* ---------- Header ---------- */
+  header.site {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(18,17,16,.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 20px; }
+  .brand {
+    font-family: var(--serif); font-size: 1.7rem; letter-spacing: .24em;
+    text-transform: uppercase; text-decoration: none; font-weight: 500;
+  }
+  nav.main { display: none; gap: 28px; }
+  nav.main a {
+    text-decoration: none; font-size: 12px; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--ivory-dim); font-weight: 500;
+  }
+  nav.main a:hover { color: var(--ivory); }
+  .bar-right { display: flex; align-items: center; gap: 18px; }
+  .bar-email { display: none; font-size: 14px; color: var(--ivory-dim); text-decoration: none; }
+  .bar-email:hover { color: var(--brass); }
+  .bar .btn { padding: 11px 18px; font-size: 12px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative; overflow: hidden;
+    padding: clamp(80px, 16vw, 180px) 0 clamp(72px, 12vw, 140px);
+    background:
+      radial-gradient(ellipse 70% 60% at 85% 10%, rgba(201,164,92,.16), transparent 60%),
+      radial-gradient(ellipse 50% 50% at 0% 100%, rgba(138,109,47,.12), transparent 60%),
+      var(--bg);
+  }
+  /* Decorative vertical rules, a quiet nod to stage light, not a graphic */
+  .hero::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: repeating-linear-gradient(90deg, rgba(243,236,224,.035) 0 1px, transparent 1px 120px);
+    mask-image: linear-gradient(to bottom, #000 30%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 100%);
+  }
+  .hero .wrap { position: relative; }
+  .hero h1 {
+    font-size: clamp(2.7rem, 9.5vw, 6.6rem);
+    text-transform: uppercase; letter-spacing: .02em; line-height: .98;
+    max-width: 13ch;
+  }
+  .hero h1 span { display: block; color: var(--brass); }
+  .hero .sub {
+    max-width: 52ch; margin: 28px 0 38px;
+    font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--ivory-dim);
+  }
+  .hero .cta { display: flex; flex-wrap: wrap; gap: 14px; }
+  .hero .loc {
+    margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line);
+    font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--ivory-dim);
+    display: flex; flex-wrap: wrap; gap: 8px 28px;
+  }
+
+  /* ---------- Intro ---------- */
+  .intro .grid { display: grid; gap: 36px; }
+  .intro h2 { max-width: 14ch; }
+  .intro .lead { font-family: var(--serif); font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.35; color: var(--ivory); }
+  .intro p.body { color: var(--ivory-dim); max-width: 60ch; }
+
+  /* ---------- Music ---------- */
+  .music { background: var(--bg-raised); border-block: 1px solid var(--line); }
+  .music-head { margin-bottom: 40px; }
+  .video {
+    position: relative; aspect-ratio: 16 / 9; width: 100%;
+    background: #000; border: 1px solid var(--line);
+  }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .note { font-size: 14px; color: var(--ivory-dim); margin-top: 14px; }
+  .note strong { color: var(--ivory); font-weight: 600; }
+  .audio { margin-top: 48px; }
+  .audio h3 { font-size: 1.7rem; margin-bottom: 16px; }
+  .audio iframe { width: 100%; height: 300px; border: 0; background: #000; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px 26px; margin-top: 18px; font-size: 14px; }
+  .links a { color: var(--brass); text-underline-offset: 4px; }
+  .links a:hover { color: var(--ivory); }
+
+  /* ---------- Configurations ---------- */
+  .configs .head { margin-bottom: 48px; max-width: 60ch; }
+  .configs .head p { color: var(--ivory-dim); margin-top: 18px; }
+  .cards { display: grid; gap: 20px; }
+  .card { padding: 34px 28px 32px; display: flex; flex-direction: column; min-height: 100%; }
+  .card .num { font-family: var(--serif); font-size: 1rem; letter-spacing: .2em; margin-bottom: 26px; }
+  .card h3 { font-size: 1.9rem; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 14px; }
+  .card p { font-size: 16px; }
+  .card .fit { margin-top: auto; padding-top: 18px; border-top: 1px solid currentColor; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; opacity: .85; }
+  .card-1 { border: 1px solid var(--line); background: var(--bg-raised); }
+  .card-1 .num { color: var(--brass); }
+  .card-1 p { color: var(--ivory-dim); }
+  .card-1 .fit { border-color: var(--line); color: var(--ivory-dim); }
+  .card-2 { background: var(--brass); color: var(--ink); border: 1px solid var(--brass); }
+  .card-2 .num { color: var(--ink); }
+  .card-2 .fit { border-color: rgba(26,24,22,.35); }
+  .card-3 { border: 1px solid var(--brass); background: linear-gradient(160deg, rgba(201,164,92,.14), transparent 70%); }
+  .card-3 .num { color: var(--brass); }
+  .card-3 p { color: var(--ivory-dim); }
+  .card-3 .fit { border-color: var(--brass-deep); color: var(--ivory-dim); }
+  .config-note { margin-top: 28px; font-size: 14px; color: var(--ivory-dim); max-width: 70ch; }
+
+  /* ---------- Events (light section) ---------- */
+  .events { background: var(--ivory); color: var(--ink); }
+  .events .eyebrow { color: #7a5c1e; }
+  .events .head { margin-bottom: 44px; max-width: 62ch; }
+  .events .head p { margin-top: 18px; color: #4a443b; }
+  .egrid { display: grid; gap: 1px; background: #cfc5b3; border: 1px solid #cfc5b3; }
+  .egrid div { background: var(--ivory); padding: 26px 22px; }
+  .egrid h3 { font-size: 1.5rem; margin-bottom: 8px; }
+  .egrid p { font-size: 15px; color: #4a443b; margin: 0; }
+  .egrid .accent { background: var(--ink); color: var(--ivory); }
+  .egrid .accent h3 { color: var(--brass); }
+  .egrid .accent p { color: var(--ivory-dim); }
+
+  /* ---------- About ---------- */
+  .about .grid { display: grid; gap: 28px; }
+  .about p { color: var(--ivory-dim); max-width: 62ch; }
+  .about .big { font-family: var(--serif); font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.35; color: var(--ivory); }
+
+  /* ---------- Booking ---------- */
+  .booking {
+    text-align: center;
+    background:
+      radial-gradient(ellipse 60% 80% at 50% 0%, rgba(201,164,92,.18), transparent 70%),
+      var(--bg-raised);
+    border-top: 1px solid var(--line);
+  }
+  .booking h2 { max-width: 16ch; margin: 0 auto 22px; }
+  .booking p.lede { color: var(--ivory-dim); max-width: 56ch; margin: 0 auto 34px; }
+  .booking .email {
+    display: inline-block; font-family: var(--serif); font-size: clamp(1.6rem, 5.5vw, 2.6rem);
+    color: var(--brass); text-decoration: none; border-bottom: 1px solid var(--brass-deep);
+    margin-bottom: 34px; word-break: break-all;
+  }
+  .booking .email:hover { color: var(--ivory); border-color: var(--ivory); }
+  .booking .meta { margin-top: 30px; font-size: 14px; color: var(--ivory-dim); }
+  .booking .meta span { display: block; }
+
+  /* ---------- Footer ---------- */
+  footer { border-top: 1px solid var(--line); padding: 44px 0 110px; font-size: 14px; color: var(--ivory-dim); }
+  footer .row { display: grid; gap: 26px; }
+  footer .brand { font-size: 1.4rem; display: inline-block; margin-bottom: 8px; color: var(--ivory); }
+  footer a { color: var(--ivory); text-underline-offset: 4px; }
+  footer a:hover { color: var(--brass); }
+  footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  footer .fine { margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; }
+
+  /* ---------- Sticky mobile booking bar ---------- */
+  .sticky-cta {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(18,17,16,.96); border-top: 1px solid var(--line);
+  }
+  .sticky-cta .btn { display: block; width: 100%; }
+
+  /* ---------- Subtle, fast reveal ---------- */
+  .reveal { opacity: 0; transform: translateY(10px); transition: opacity .35s ease, transform .35s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* ---------- Breakpoints ---------- */
+  @media (min-width: 680px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+    .egrid { grid-template-columns: repeat(2, 1fr); }
+    .intro .grid { grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; }
+    .about .grid { grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; }
+    footer .row { grid-template-columns: 1.2fr 1fr 1fr; }
+  }
+  @media (min-width: 900px) {
+    nav.main { display: flex; }
+    .bar-email { display: inline; }
+    .egrid { grid-template-columns: repeat(4, 1fr); }
+    .sticky-cta { display: none; }
+    footer { padding-bottom: 44px; }
+    .audio iframe { height: 166px; }
+  }
+</style>
+</head>
+
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Jazztron home">Jazztron</a>
+    <nav class="main" aria-label="Primary">
+      <a href="#music">Music</a>
+      <a href="#configurations">Formats</a>
+      <a href="#events">Events</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="bar-right">
+      <a class="bar-email" href="mailto:jazztron5@gmail.com">jazztron5@gmail.com</a>
+      <a class="btn btn-solid" href="mailto:jazztron5@gmail.com?subject=Booking%20Inquiry%20-%20Jazztron">Inquire</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <p class="eyebrow">Louisville, Kentucky</p>
+      <h1 id="hero-title">Live jazz. <span>Sophisticated pop.</span> Memorable events.</h1>
+      <p class="sub">Flexible live music for weddings, cocktail receptions, corporate gatherings, private parties, and more.</p>
+      <div class="cta">
+        <a class="btn btn-ghost" href="#music">Watch &amp; Listen</a>
+        <a class="btn btn-solid" href="mailto:jazztron5@gmail.com?subject=Booking%20Inquiry%20-%20Jazztron">Inquire About Booking</a>
+      </div>
+      <div class="loc">
+        <span>Louisville &middot; Kentuckiana</span>
+        <span>Available to travel</span>
+        <span>Solo &middot; Duo &middot; Ensemble</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. INTRODUCTION -->
+  <section class="intro" aria-labelledby="intro-title">
+    <div class="wrap grid">
+      <div class="reveal">
+        <p class="eyebrow">Jazztron</p>
+        <h2 id="intro-title">The right sound for the occasion.</h2>
+      </div>
+      <div class="reveal">
+        <p class="lead">Jazz standards, jazzy takes on familiar songs, and sophisticated pop, played live and matched to your room.</p>
+        <p class="body">Jazztron is built around a jazz guitarist and a female vocalist. The music can stay intimate and understated for a cocktail hour or dinner, or grow into a fuller live ensemble for a reception or featured performance. The format and energy are set to fit the event, the venue, and the guests.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. MUSIC / MEDIA -->
+  <section class="music" id="music" aria-labelledby="music-title">
+    <div class="wrap">
+      <div class="music-head reveal">
+        <p class="eyebrow">Watch &amp; Listen</p>
+        <h2 id="music-title">Hear Jazztron live.</h2>
+      </div>
+
+      <div class="reveal">
+        <div class="video">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/aYXSpQy3-VQ"
+            title="Jazztron live performance of Have Yourself a Merry Little Christmas"
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+        <p class="note"><strong>Featured live performance:</strong> &ldquo;Have Yourself a Merry Little Christmas.&rdquo; A holiday performance, representing the seasonal part of the repertoire alongside jazz standards and sophisticated pop.
+          <a href="https://youtu.be/aYXSpQy3-VQ" target="_blank" rel="noopener noreferrer" style="color:var(--brass)">Open on YouTube</a></p>
+      </div>
+
+      <div class="audio reveal">
+        <h3>More music</h3>
+        <iframe
+          title="Jazztron on SoundCloud"
+          loading="lazy"
+          scrolling="no"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fjazztron-1&color=%23c9a45c&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=false"></iframe>
+        <div class="links">
+          <a href="https://m.soundcloud.com/jazztron-1" target="_blank" rel="noopener noreferrer">Listen on SoundCloud</a>
+          <a href="https://www.facebook.com/jazztron" target="_blank" rel="noopener noreferrer">Jazztron on Facebook</a>
+          <a href="https://www.gigsalad.com/jazztron_louisville" target="_blank" rel="noopener noreferrer">GigSalad profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CONFIGURATIONS -->
+  <section class="configs" id="configurations" aria-labelledby="configs-title">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Formats</p>
+        <h2 id="configs-title">Three ways to book.</h2>
+        <p>One act, scaled to the event. Choose the format that fits your room, your guest count, and the role music plays in the evening.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card card-1 reveal">
+          <div class="num">I</div>
+          <h3>Solo Guitar</h3>
+          <p>Elegant instrumental jazz guitar. Unobtrusive and polished, it sets the tone without competing with conversation.</p>
+          <div class="fit">Cocktail hours &middot; Dinners &middot; Receptions &middot; Intimate gatherings</div>
+        </article>
+
+        <article class="card card-2 reveal">
+          <div class="num">II</div>
+          <h3>Guitar &amp; Vocals</h3>
+          <p>The core Jazztron experience. Jazz standards, jazzy pop arrangements, and holiday favorites, with a female vocalist leading.</p>
+          <div class="fit">Weddings &middot; Corporate events &middot; Restaurants &middot; Seasonal parties</div>
+        </article>
+
+        <article class="card card-3 reveal">
+          <div class="num">III</div>
+          <h3>Expanded Ensemble</h3>
+          <p>Additional musicians join for a fuller sound and a more substantial, featured performance.</p>
+          <div class="fit">Galas &middot; Receptions &middot; Fundraisers &middot; Larger celebrations</div>
+        </article>
+      </div>
+      <p class="config-note">Ensemble size and instrumentation are arranged for each event. Please inquire early so the right format can be confirmed for your date.</p>
+    </div>
+  </section>
+
+  <!-- 5. EVENTS -->
+  <section class="events" id="events" aria-labelledby="events-title">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Events</p>
+        <h2 id="events-title">Made for the room.</h2>
+        <p>Louisville live jazz for corporate events, wedding cocktail hour music, and private event entertainment. Jazztron can play as background music or take a more featured role in the program.</p>
+      </div>
+
+      <div class="egrid reveal">
+        <div><h3>Corporate</h3><p>Company celebrations, client dinners, and corporate gatherings.</p></div>
+        <div><h3>Weddings</h3><p>Ceremonies, cocktail hours, receptions, and rehearsal dinners.</p></div>
+        <div><h3>Cocktail Receptions</h3><p>Live music that gives a reception its atmosphere.</p></div>
+        <div><h3>Private Parties</h3><p>Anniversaries, milestone birthdays, and home celebrations.</p></div>
+        <div><h3>Holiday &amp; Seasonal</h3><p>Holiday parties and seasonal events, from classic to contemporary.</p></div>
+        <div><h3>Hospitality</h3><p>Restaurants, hotels, lounges, and other hospitality venues.</p></div>
+        <div><h3>Fundraisers</h3><p>Galas, benefits, and special events.</p></div>
+        <div class="accent"><h3>Background or Featured</h3><p>A quiet backdrop to conversation, or a performance guests gather around.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. ABOUT -->
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="wrap grid">
+      <div class="reveal">
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">Led by Pat Hume.</h2>
+      </div>
+      <div class="reveal">
+        <p class="big">A Louisville-based live entertainment project led by guitarist Pat Hume.</p>
+        <p>Pat is a professional musician and co-owner of Hidden Room Studios. Jazztron draws on jazz standards and contemporary popular music to create an adaptable musical experience for events, with a vocalist and additional musicians added as the occasion calls for them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. BOOKING -->
+  <section class="booking" id="booking" aria-labelledby="booking-title">
+    <div class="wrap reveal">
+      <p class="eyebrow">Booking</p>
+      <h2 id="booking-title">Let&rsquo;s make your event sound great.</h2>
+      <p class="lede">Inquire about availability, formats, and pricing. Include your date, venue, and approximate guest count, and you will get a direct reply.</p>
+      <a class="email" href="mailto:jazztron5@gmail.com?subject=Booking%20Inquiry%20-%20Jazztron&amp;body=Event%20date%3A%0D%0AVenue%20and%20city%3A%0D%0AEvent%20type%3A%0D%0APreferred%20format%20(solo%20guitar%2C%20guitar%20and%20vocals%2C%20ensemble)%3A%0D%0AApproximate%20guest%20count%3A%0D%0AStart%20time%20and%20length%20of%20performance%3A%0D%0A">jazztron5@gmail.com</a>
+      <div>
+        <a class="btn btn-solid" href="mailto:jazztron5@gmail.com?subject=Booking%20Inquiry%20-%20Jazztron&amp;body=Event%20date%3A%0D%0AVenue%20and%20city%3A%0D%0AEvent%20type%3A%0D%0APreferred%20format%20(solo%20guitar%2C%20guitar%20and%20vocals%2C%20ensemble)%3A%0D%0AApproximate%20guest%20count%3A%0D%0AStart%20time%20and%20length%20of%20performance%3A%0D%0A">Inquire About Booking</a>
+      </div>
+      <p class="meta">
+        <span>Booking contact: Pat Hume</span>
+        <span>Louisville, Kentucky &middot; Serving Kentuckiana and surrounding areas</span>
+        <span>Travel and custom ensemble configurations can be discussed.</span>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div>
+        <a class="brand" href="#top">Jazztron</a>
+        <p>Live jazz and sophisticated pop.<br>Louisville, Kentucky</p>
+      </div>
+      <div>
+        <p>Booking: Pat Hume<br><a href="mailto:jazztron5@gmail.com">jazztron5@gmail.com</a></p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="https://youtu.be/aYXSpQy3-VQ" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          <li><a href="https://m.soundcloud.com/jazztron-1" target="_blank" rel="noopener noreferrer">SoundCloud</a></li>
+          <li><a href="https://www.facebook.com/jazztron" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://www.gigsalad.com/jazztron_louisville" target="_blank" rel="noopener noreferrer">GigSalad</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">&copy; <span id="yr">2026</span> Jazztron. Louisville, KY.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn-solid" href="mailto:jazztron5@gmail.com?subject=Booking%20Inquiry%20-%20Jazztron">Inquire About Booking</a>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Subtle reveal on scroll; content stays visible if JS or IntersectionObserver is unavailable.
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
+
+</body>
+</html>
